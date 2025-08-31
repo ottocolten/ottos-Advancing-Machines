@@ -1,0 +1,11 @@
+{
+  "type": "PayloadBlock",   // not GenericCrafter
+  "name": "tank-treads",
+  "description": "Rubber Tank Treads used for large tanks inside Assebly Garages",
+  "health": 400,
+  "size": 2,
+  "requirements": [],
+  "buildable": false,      // hidden from build menu
+  "category": "units",
+  "alwaysUnlocked": true
+}
