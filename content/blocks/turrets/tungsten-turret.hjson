@@ -3,15 +3,15 @@ name: Tungsten Turret
 displayName: "Tungsten Turret"
 description: "A Turret made of pure tungsten"
 size: 3
-health: 250
+health: 1500
 rotateSpeed: 2.5
 targetAir: true
 targetGround: true
 reload: 60   
-range: 60          
+range: 200          
 inaccuracy: 2
-shootSound: shootBigColor
-
+shootSound: shootBig
+recoils: 2
 requirements: [
     { item: tungsten, amount: 250}
     { item: graphite, amount: 50}
@@ -20,23 +20,52 @@ requirements: [
 ammoTypes:{
   tungsten:{
     type: BasicBulletType
+    despawnHit: true
+    hitEffect: {
+      type: ParticleEffect
+      region: "spawnShockwave" //WHY WONT THIS DAMN THING WOORRRKK!!! >:^
+      length: 0.1
+      sizeFrom: 0.4
+      sizeTo: 10
+      colorFrom: 47cbffff
+      colorTo: 6cb8ff15
+    }
+    hitSound: hitLaser
     speed: 7
     damage: 15
-    lifetime: 60
-    width: 6
+    lifetime: 25
+    width: 12
     height: 14
-    frontColor: #6aa7cfff
-    backColor: #bce4ffff
-    mixColorFrom: #1e66c4ff
-    mixColorTo: #2788c9ff
-    trailEffect: colorTrail
-    shrinkY: 0.2
-    shrinkInterp: pow2In
-    spin: 180
-    rotationOffset: 0
-    hitEffect: hitBulletSmall
+    frontColor: 6aa7cfff
+    backColor: bce4ffff
+    trailChance: 1
+    trailWidth: 1.3
+    trailLength: 8
+    trailColor: 55b2ffff
+    ammoMultiplier: 1
   }
 }
 
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: -barrel-l
+      mirror: false
+      under: false
+      progress: recoil
+      recoilIndex: 0
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-r
+      mirror: false
+      under: false
+      progress: recoil
+      recoilIndex: 1
+    }
+  ]
+}
 
 category: turret
