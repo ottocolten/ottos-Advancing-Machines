@@ -1,0 +1,42 @@
+type: ItemTurret
+name: tungsten-turret
+displayName: "Tungsten Turret"
+description: "A Turret made of pure tungsten"
+size: 3
+health: 250
+rotateSpeed: 3
+targetAir: true
+targetGround: true
+reload: 60          
+range: 100          
+inaccuracy: 2       
+shootSound: shootBig2
+
+requirements: [
+    { item: tungsten, amount: 250}
+    { item:  graphite, amount: 50}
+]
+
+ammoTypes:{
+  tungsten:{
+    type: BasicBulletType
+    speed: 8
+    damage: 15
+    lifetime: 90
+    width: 6
+    height: 14
+    frontColor: #34385aff
+    backColor: #2f345fff
+    mixColorFrom: #3a5370d3
+    mixColorTo: #3d91c5d3
+    trailEffect: trailFade
+    shrinkY: 0.2
+    shrinkInterp: pow2In
+    spin: 180
+    rotationOffset: 0
+    hitEffect: hitBulletSmall
+  }
+}
+
+
+category: turret
