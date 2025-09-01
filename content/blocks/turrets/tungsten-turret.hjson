@@ -4,25 +4,25 @@ displayName: "Tungsten Turret"
 description: "A Turret made of pure tungsten"
 size: 3
 health: 250
-rotateSpeed: 3
+rotateSpeed: 2.5
 targetAir: true
 targetGround: true
-reload: 60          
-range: 100          
-inaccuracy: 2       
-shootSound: shootBig2
+reload: 60   
+range: 60          
+inaccuracy: 2
+shootSound: shootBigColor
 
 requirements: [
     { item: tungsten, amount: 250}
-    { item:  graphite, amount: 50}
+    { item: graphite, amount: 50}
 ]
 
 ammoTypes:{
   tungsten:{
     type: BasicBulletType
-    speed: 8
+    speed: 7
     damage: 15
-    lifetime: 90
+    lifetime: 60
     width: 6
     height: 14
     frontColor: #6aa7cfff
