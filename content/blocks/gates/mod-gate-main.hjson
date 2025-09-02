@@ -1,0 +1,12 @@
+type: wall
+name: "Gate: Advanced Machines"
+description: "The Gate towards all of the Advanced Machines."
+details: "Holds the research tree for Advanced Machines."
+health: 0
+buildVisibility: hidden
+alwaysUnlocked: true
+research: {
+    root: true
+    name: Advanced Machines
+    requiresUnlock: true
+}

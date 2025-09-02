@@ -12,6 +12,8 @@ range: 200
 inaccuracy: 2
 shootSound: shootBig
 recoils: 2
+predictTarget: true
+shake: 1
 requirements: [
     { item: tungsten, amount: 250}
     { item: graphite, amount: 50}
@@ -21,15 +23,6 @@ ammoTypes:{
   tungsten:{
     type: BasicBulletType
     despawnHit: true
-    hitEffect: {
-      type: ParticleEffect
-      region: "spawnShockwave" //WHY WONT THIS DAMN THING WOORRRKK!!! >:^
-      length: 0.1
-      sizeFrom: 0.4
-      sizeTo: 10
-      colorFrom: 47cbffff
-      colorTo: 6cb8ff15
-    }
     hitSound: hitLaser
     speed: 7
     damage: 15
@@ -66,6 +59,10 @@ drawer: {
       recoilIndex: 1
     }
   ]
+}
+
+research: {
+    parent: mod-gate-turret
 }
 
 category: turret
