@@ -62,7 +62,7 @@ drawer: {
 }
 
 research: {
-    parent: mod-gate-turret
+    parent: mod-gate-turrets
 }
 
 category: turret
