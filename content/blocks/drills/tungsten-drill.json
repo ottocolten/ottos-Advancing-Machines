@@ -31,7 +31,7 @@
         "power": 0.35,
         "liquids": {
             "liquid": "hydrogen",
-            "amount": "0.005",
+            "amount": "0.05",
             "booster": "true",
             "optional": "true"
         }

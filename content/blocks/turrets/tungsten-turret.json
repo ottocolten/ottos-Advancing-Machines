@@ -1,0 +1,69 @@
+{
+  "type": "ItemTurret",
+  "name": "Tungsten Turret",
+  "displayName": "Tungsten Turret",
+  "description": "A Turret made of pure tungsten",
+  "size": 3,
+  "health": 1500,
+  "rotateSpeed": 2.5,
+  "targetAir": true,
+  "targetGround": true,
+  "reload": 60,
+  "range": 200,
+  "inaccuracy": 2,
+  "shootSound": "shootAlt",
+  "recoils": 2,
+  "predictTarget": true,
+  "shake": 1,
+  "requirements": [
+      { "item": "tungsten", "amount": 250},
+      { "item": "graphite", "amount": 50}
+  ],
+
+  "ammoTypes":{
+    "tungsten":{
+      "type": "BasicBulletType",
+      "despawnHit": true,
+      "hitSound": "hitLaser",
+      "shootEffect": "shootBigSmoke",
+      "smokeEffect": "shootBigSmoke2",
+      "speed": 7,
+      "damage": 15,
+      "lifetime": 25,
+      "width": 12,
+      "height": 14,
+      "frontColor": "7ce6f2",
+      "backColor": "54ccf7",
+      "trailChance": 1,
+      "trailWidth": 1.3,
+      "trailLength": 8,
+      "trailColor": "8a9bff",
+      "ammoMultiplier": 1
+    }
+  },
+
+  "drawer": {
+    "type": "DrawTurret",
+    "parts": [
+      {
+        "type": "RegionPart",
+        "suffix": "-barrel-l",
+        "mirror": false,
+        "under": false,
+        "progress": "recoil",
+        "recoilIndex": 0
+      },
+      {
+        "type": "RegionPart",
+        "suffix": "-barrel-r",
+        "mirror": false,
+        "under": false,
+        "progress": "recoil",
+        "recoilIndex": 1
+      }
+    ]
+  },
+
+  "research": "mod-gate-turrets",
+  "category": "turret"
+}
