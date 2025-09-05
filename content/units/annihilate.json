@@ -1,0 +1,9 @@
+{
+    "type": "tank",
+    "name": "Annihilate",
+    "template": "TankUnitType",
+    "flying": "false",
+    "description": "The Fabeled Tier 6 Tank, Now Ready for the Battlefield. (Just kidding, its still not done, nor even coded or sprited yet :3)",
+    "health": 56000,
+    "armor": 34
+}

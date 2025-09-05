@@ -15,10 +15,13 @@
     },
     "plans": [
         {
-            "unit": "conquer",
-            "time": 3600,
+            "type": "UnitAssemblerPlan",
+            "unit": "annihilate",
+            "time": 6500,   
             "requirements": [
-                { "block": "tank-treads", "amount": 55 }
+                { "payload": "tank-treads", "amount": 55 },
+                { "item": "tungsten", "amount": 1250},
+                { "item": "bolts", "amount": 150}
             ]
         }
     ],

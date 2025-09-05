@@ -51,6 +51,7 @@
         "type": "RegionPart",
         "suffix": "-body",
         "progress": "warmup",
+        "recoilindex": "0",
         "moveY": -1
 
       },
@@ -58,25 +59,16 @@
         "type": "RegionPart",
         "suffix": "-barrel-l",
         "progress": "recoil",
-        "recoilindex": "0",
+        "recoilindex": "1",
         "moveY": -2
       },
       {
         "type": "RegionPart",
         "suffix": "-barrel-r",
         "progress": "recoil",
-        "recoilindex": "1",
+        "recoilindex": "2",
         "moveY": -2
       }
-    ]
-  },
-  
-  "shoot": {
-    "type": "ShootBarrel",
-    "barrels": [
-      -1, -2, -3,
-      3, 2, 1,
-      6, 5, 4
     ]
   },
 
