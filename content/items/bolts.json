@@ -1,0 +1,10 @@
+{
+    "type": "item",
+    "name": "bolts",
+    "displayName": "Bolts",
+    "description": "A Pile of bolts used for assembling larger Units",
+    "color": 626366,
+    "hardness": 1,
+    "cost": 7,
+    "healthScaling": 1.2
+}

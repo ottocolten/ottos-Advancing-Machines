@@ -8,13 +8,15 @@
   "rotateSpeed": 2.5,
   "targetAir": true,
   "targetGround": true,
-  "reload": 60,
+  "reload": 30,
   "range": 200,
-  "inaccuracy": 2,
+  "inaccuracy": 5,
   "shootSound": "shootAlt",
   "recoils": 2,
+  "recoil": 1,
   "predictTarget": true,
   "shake": 1,
+  "booster": 2,
   "requirements": [
       { "item": "tungsten", "amount": 250},
       { "item": "graphite", "amount": 50}
@@ -29,9 +31,8 @@
       "smokeEffect": "shootBigSmoke2",
       "speed": 7,
       "damage": 15,
-      "lifetime": 25,
       "width": 12,
-      "height": 14,
+      "length": 45,
       "frontColor": "7ce6f2",
       "backColor": "54ccf7",
       "trailChance": 1,
@@ -44,25 +45,48 @@
 
   "drawer": {
     "type": "DrawTurret",
+    "basePrefix": "reinforced-",
     "parts": [
       {
         "type": "RegionPart",
+        "suffix": "-body",
+        "progress": "warmup",
+        "moveY": -1
+
+      },
+      {
+        "type": "RegionPart",
         "suffix": "-barrel-l",
-        "mirror": false,
-        "under": false,
         "progress": "recoil",
-        "recoilIndex": 0
+        "recoilindex": "0",
+        "moveY": -2
       },
       {
         "type": "RegionPart",
         "suffix": "-barrel-r",
-        "mirror": false,
-        "under": false,
         "progress": "recoil",
-        "recoilIndex": 1
+        "recoilindex": "1",
+        "moveY": -2
       }
     ]
   },
+  
+  "shoot": {
+    "type": "ShootBarrel",
+    "barrels": [
+      -1, -2, -3,
+      3, 2, 1,
+      6, 5, 4
+    ]
+  },
+
+  "consumes": {
+      "liquids": {
+          "liquid": "water",
+          "amount": 0.09,
+          "booster": true
+      }
+    },
 
   "research": "mod-gate-turrets",
   "category": "turret"

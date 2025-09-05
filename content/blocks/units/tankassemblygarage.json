@@ -1,0 +1,35 @@
+{
+    "type": "UnitAssembler",
+    "name": "Tank Assembly Garage",
+    "description": "Fabricates materials to be used in Part Factories",
+    "size": 16,
+    "health": 2500,
+    "craftTime": 3600,
+    "hasPower": true,
+    "areaSize": 35,
+    "consumes": {
+        "power": 2000,
+        "liquids": [
+            { "liquid": "nitrogen", "amount": 25 }
+        ]
+    },
+    "plans": [
+        {
+            "unit": "conquer",
+            "time": 3600,
+            "requirements": [
+                { "block": "tank-treads", "amount": 55 }
+            ]
+        }
+    ],
+
+    "requirements": [
+        { "item": "tungsten", "amount": 3500 },
+        { "item": "graphite", "amount": 2000 },
+        { "item": "surge-alloy", "amount": 2000},
+        { "item": "phase-fabric", "amount": 1250},
+        { "item": "silicon", "amount": 5000}
+    ],
+
+    "category": "crafting"
+}

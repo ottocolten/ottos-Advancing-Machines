@@ -1,8 +1,0 @@
-type: item
-name: bolts
-displayName: "Bolts"
-description: "A Pile of bolts used for assembling Units"
-color: 626366
-hardness: 1
-cost: 75
-healthScaling: 1.2
