@@ -5,5 +5,12 @@
     "flying": "false",
     "description": "The Fabeled Tier 6 Tank, Now Ready for the Battlefield. (Just kidding, its still not done, nor even coded or sprited yet :3)",
     "health": 56000,
-    "armor": 34
+    "armor": 34,
+    "hitSize": 35,
+    "speed": 3,
+    "targetAir": true,
+    "fogRadius": 50,
+    "treadPullOffset": 2,
+    "crushDamage": 100,
+    "rotateSpeed": 0.8
 }

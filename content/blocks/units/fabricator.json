@@ -1,0 +1,43 @@
+{
+    "type": "Constructor",
+    "name": "Part Fabricator",
+    "description": "Fabricates materials to be used in Part Factories",
+    "size": 3,
+    "health": 560,
+    "craftTime": 90,
+    "hasPower": true,
+
+    "plans": [
+        {
+            "block": "mech-leg",
+            "time": 900,
+            "requirements": [
+                { "item": "tungsten", "amount": 40 },
+                { "item": "blots", "amount": 10 },
+                { "item": "graphite", "amount": 15 },
+                { "item": "silicon", "amount": 5 }
+            ]
+        },
+        {
+            "block": "tank-treads",
+            "time": 900,
+            "requirements": [
+                { "item": "rubber", "amount": 15 },
+                { "item": "steel", "amount": 10 },
+                { "item": "graphite", "amount": 10 }
+            ]
+        }
+    ],
+
+    "filter":[
+        "mech-leg",
+        "tank-treads"
+    ],
+    "requirements": [
+        { "item": "tungsten", "amount": 150 },
+        { "item": "graphite", "amount": 80 },
+        { "item": "surge-alloy", "amount": 50}
+    ],
+
+    "category": "crafting"
+}
