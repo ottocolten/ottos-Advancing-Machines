@@ -1,0 +1,16 @@
+{
+    "type": "tank",
+    "name": "Tank Minion",
+    "template": "TankUnitType",
+    "flying": "false",
+    "description": "A Small Minion Spat Out by Annihilate",
+    "health": 1000,
+    "armor": 10,
+    "hitSize": 35,
+    "speed": 6,
+    "targetAir": false,
+    "fogRadius": 25,
+    "treadPullOffset": 2,
+    "crushDamage": 1,
+    "rotateSpeed": 2.5
+}

@@ -1,0 +1,384 @@
+name: Colonize
+template: TankUnitType
+type: tank
+flying: false
+description: A very large and powerful tank with a mounted miniaturized smite that can crush ennemy defenses.
+health: 56000
+armor: 32
+hitSize: 66
+speed: 0.4
+targetAir: true
+lightRadius: 5
+singleTarget: true
+fogRadius: 40
+treadPullOffset: 2
+crushDamage: 50
+rotateSpeed: 0.76
+treadRects: [
+{
+x: -44
+y: 104
+width: 21
+height: 20
+}
+{
+x: -104
+y: 77
+with: 49
+height: 60
+}
+{
+x: -145
+y: 37
+width: 14
+height: 20
+}
+{
+x: -36
+y: 18
+width: 23
+height: 20
+}
+{
+x: -121
+y: -122
+width: 20
+height: 80
+}
+{
+x: -86
+y: -140
+width: 43
+height: 40
+}
+]
+parts: [
+{
+type: RegionPart
+suffix: -glow
+color: ff000066
+blending: additive
+outline: false
+}
+]
+weapons: [
+{
+
+name: colonize-weapon
+layerOffset: 1
+reload: 30
+rotate: true
+rotateSpeed: 1.8
+x: 0
+y: 0
+mirror: false
+shootSound: shootSmite
+shootWarmupSpeed: 0.04
+shootY: 40
+minWarmup: 0.94
+recoil: 2
+rotateSpeed: 1.4
+heatColor: ffee71
+shoot: {
+type: ShootMulti
+source: ShootAlternate
+dest: [
+{
+  type: ShootAlternate
+  barrels: 3
+  shots: 3
+  spread: 4
+}
+{
+  type: ShootHelix
+  scl: 4
+  mag: 3
+}
+]
+}
+bullet: {
+type: BasicBulletType
+sprite: large-orb
+lifetime: 60
+speed: 5
+width: 17
+height: 21
+hitSize: 8
+damage: 187.5
+shootEffect: {
+type: MultiEffect
+effects: [
+shootTitan,
+colorSparkBig,
+{
+type: WaveEffect
+colorFrom: f3e979
+colorTo: f3e979
+lifetime: 12
+sizeTo: 20
+strokeFrom: 3
+strokeTo: 0.3
+}
+]
+}
+smokeEffect: shootSmokeSmite
+pierceCap: 4
+pierce: true
+pierceBuilding: true
+hitColor: f3e979
+frontColor: ffffff
+backColor: f3e979
+trailWidth: 2.8
+trailLength: 9
+hitEffect: hitBulletColor
+despawnEffect: {
+  type: MultiEffect
+effects: [
+  hitBulletColor,
+  {
+  type: WaveEffect
+  sizeTo: 30
+  colorFrom: f3e979
+  lifetime: 12
+}
+]
+}
+trailRotation: true
+trailEffect: disperseTrail
+trailInterval: 3
+trailColor: f3e979
+intervalBullet: {
+  type: LightningBulletType
+    damage: 30
+    collidesAir: false
+    lightningColor: f3e979
+    lightningLength: 5
+    lightningLengthRand: 10
+}
+bulletInterval: 3
+}
+parts: [
+  {
+  type: RegionPart
+  suffix: -blade
+  x: 0
+  y: 0
+  layerOffset: -0.01
+  color: f3e97900
+  colorTo: f3e979ff
+  mirror: true
+  moveX: 16
+  moveY: -12
+  moveRot: -45
+  moves: [
+    {
+    type: PartMove
+    rot: -10
+    progress: recoil
+    }
+    ]
+  }
+  {
+  type: RegionPart
+  suffix: -blade
+  x: 0
+  y: 4
+  layerOffset: -0.01
+  color: f3e9797100
+  colorTo: f3e979ff
+  mirror: true
+  moveX: 18
+  moveY: 0
+  moves: [
+    {
+    type: PartMove
+    rot: -10
+    progress: recoil
+    }
+    ]
+  }
+  {
+  type: RegionPart
+  suffix: -blade
+  x: 0
+  y: 8
+  layerOffset: -0.01
+  color: f3e97900
+  colorTo: f3e979ff
+  mirror: true
+  moveX: 28
+  moveY: 0
+  moves: [
+    {
+    type: PartMove
+    rot: -10
+    progress: recoil
+    }
+    ]
+  }
+  {
+  type: RegionPart
+  suffix: -middle
+  heatColor: f3e979
+  progress: recoil
+  moveY: -4
+  heatProgress: {
+    type: recoil
+    op: blend
+    other: warmup
+    amount: 0.5
+    }
+  }
+  {
+  type: RegionPart
+  suffix: -side
+  mirror: true
+  children: [
+    {
+    type: RegionPart
+    color: ff000000
+    colorTo: ff000066
+    blending: additive
+    outline: false
+    suffix: -side-glow
+    }
+    ]
+  heatColor: f3e979
+  progress: recoil
+  moveY: -4
+  moves: [
+    {
+    type: PartMove
+    progress: warmup
+    x: 4
+    }
+    ]
+  heatProgress: {
+    type: recoil
+    op: blend
+    other: warmup
+    amount: 0.5
+    }
+  }
+  {
+  type: HaloPart
+  shapes: 2
+  haloRotateSpeed: 0
+  layer: 110
+  haloRotation: 90
+  triLength: 0
+  triLengthTo: 20
+  haloRadius: 16
+  tri: true
+  radius: 4
+  color: f3e979
+  y: -32
+  }
+    {
+  type: HaloPart
+  layer: 110
+  shapes: 2
+  haloRotateSpeed: 0
+  haloRotation: 90
+  triLength: 0
+  triLengthTo: 20
+  radius: 4
+  haloRadius: 16
+  tri: true
+  radius: 4
+  color: f3e979
+  y: -32
+  }
+  {
+  type: ShapePart
+  circle: true
+  radius: 10
+  layer: 110
+  hollow: true
+  color: f3e979
+  stroke: 0
+  strokeTo: 2
+  rotateSpeed: 1.8
+  y: -32
+  }
+    {
+  type: HaloPart
+  shapes: 2
+  haloRotation: 90
+  triLength: 0
+  triLengthTo: 5
+  haloRadius: 16
+  layer: 110
+  tri: true
+  radius: 4
+  color: f3e979
+  shapeRotation: 180
+  y: -32
+  }
+    {
+  type: HaloPart
+  shapes: 4
+  haloRotateSpeed: -1.8
+  haloRotation: 45
+  triLength: 0
+  triLengthTo: 2
+  haloRadius: 16
+  layer: 110
+  tri: true
+  radius: 8
+  color: f3e979
+  shapeRotation: 180
+  y: -32
+  }
+    {
+  type: HaloPart
+  shapes: 4
+  haloRotateSpeed: 1.8
+  haloRotation: 45
+  triLength: 0
+  triLengthTo: 2
+  layer: 110
+  haloRadius: 16
+  tri: true
+  radius: 8
+  color: f3e979
+  shapeRotation: 180
+  y: -32
+  }
+      {
+  type: HaloPart
+  shapes: 4
+  haloRotateSpeed: 1.8
+  haloRotation: 45
+  layer: 110
+  triLength: 0
+  triLengthTo: 3
+  haloRadius: 10
+  tri: true
+  radius: 6
+  color: f3e979
+  y: -32
+  }
+    {
+  type: ShapePart
+  circle: true
+  radius: 4
+  hollow: true
+  color: f3e979
+  layer: 110
+  stroke: 0
+  strokeTo: 1.6
+  rotateSpeed: 1.8
+  y: -32
+  }
+]
+}
+]
+abilities: [
+{
+type: UnitSpawnAbility
+spawnTime: 4800
+spawnY: -32
+unit: locus
+}
+]
