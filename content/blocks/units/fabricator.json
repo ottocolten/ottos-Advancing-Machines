@@ -3,7 +3,7 @@
     "name": "Part Fabricator",
     "description": "Fabricates materials to be used in Part Factories",
     "size": 3,
-    "health": 560,
+    "health": 760,
     "craftTime": 90,
     "hasPower": true,
 

@@ -1,0 +1,16 @@
+{
+    "type": "liquid",
+    "name": "Telo",
+    "description": "A Chemical Mixture of Rubber and Steel",
+    "gas": false,
+    "color": "26395aff",
+    "barColor": "182768ff",
+    "flammability": 0.4,
+    "temperature": 0.7,
+    "heatCapacity": 0,
+    "viscosity": 0.6,
+    "explosiveness": 0.1,
+    "effect": "tarred",
+    "boilPoint": 1,
+    "vaporEffect": "fluxVapor"
+}

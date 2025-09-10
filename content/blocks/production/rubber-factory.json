@@ -1,0 +1,45 @@
+{
+    "name": "Rubber Processing Plant",
+    "type": "HeatCrafter",
+    "description": "Fuses an oil-like substance with a combustable resource to synthesize Rubber",
+    "size": 4,
+    "health": "800",
+    "craftTime": 120,
+    "hasPower": true,
+
+    "heatRequirement": 20,
+    "overheatScale": 1.5,
+    "maxEfficiency": 2.5,
+
+    "consumes": {
+        "items": {
+            "item": [
+                { "item": "oxide", "amount": 3}
+            ]
+        },
+        "liquids":{
+            "liquid": [
+                { "liquid": "ozone", "amount": 4}
+            ]
+        },
+        "power": 1
+    },
+
+    "output": {
+        "items": {
+            "item": [
+                { "item": "rubber", "amount": 2}
+            ]
+        }
+    },
+
+    "requirements": [
+        { "item": "tungsten", "amount": 105},
+        { "item": "beryllium", "amount": 120},
+        { "item": "graphite", "amount": 65},
+        { "item": "silicon", "amount": 50}
+    ],
+    
+    "research": "mod-gate-production",
+    "category": "crafting"
+}
