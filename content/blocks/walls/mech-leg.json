@@ -1,11 +1,11 @@
 {
-  "type": "PayloadBlock",   // not GenericCrafter
+  "type": "PayloadBlock", 
   "name": "mech-leg",
   "description": "A Large Leg for Mechs used in Assembly Garages Only",
   "health": 400,
   "size": 2,
   "requirements": [],
-  "buildable": false,      // hidden from build menu
+  "buildable": false,
   "category": "units",
   "alwaysUnlocked": true
 }
