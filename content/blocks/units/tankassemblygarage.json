@@ -9,20 +9,18 @@
     "areaSize": 35,
     "dronesCreated": 8,
     "consumes": {
-        "power": 2000,
+        "power": 200,
         "liquids": [
-            { "liquid": "nitrogen", "amount": 25 }
+            { "liquid": "sonyogen", "amount": 25 }
         ]
     },
     "plans": [
         {
-            "type": "UnitAssemblerPlan",
+            "type": "AssemblerUnitPlan",
             "unit": "annihilate",
-            "time": 6500,   
+            "time": 6500,
             "requirements": [
-                { "item": "tank-treads", "amount": 55 },
-                { "item": "tungsten", "amount": 1250},
-                { "item": "bolts", "amount": 150}
+                { "PayloadStack": "advancing-machines-tank-treads", "amount": 55 }
             ]
         }
     ],
@@ -35,5 +33,5 @@
         { "item": "silicon", "amount": 5000}
     ],
 
-    "category": "crafting"
+    "category": "units"
 }

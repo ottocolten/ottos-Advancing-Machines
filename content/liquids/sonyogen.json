@@ -1,0 +1,17 @@
+{
+    "type": "liquid",
+    "name": "Sonyogen",
+    "description": "A Chemical Mixture of Slag, Cyanogen, and Ozone",
+    "gas": false,
+    "color": "b1858a",
+    "barColor": "b1858a",
+    "flammability": 1,
+    "temperature": 0.6,
+    "heatCapacity": 0.8,
+    "viscosity": 0.6,
+    "explosiveness": 0.8,
+    "collant": false,
+    "incinerable": false,
+    "boilPoint": 2.74,
+    "vaporEffect": "fluxVapor"
+}
