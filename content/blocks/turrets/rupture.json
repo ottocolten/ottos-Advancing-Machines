@@ -1,0 +1,160 @@
+{
+    "type": "ItemTurret",
+    "name": "Rupture",
+    "description": "Fires piercing Tungsten or Thorium ammunition at enemy targets. An upgraded variant of “Breach”",
+    "size": 3,
+    "health": 2065,
+    "rotateSpeed": 1.5,
+    "targetAir": true,
+    "targetGround": true,
+    "shotDelay": 100,
+    "reload": 40,
+    "range": 175,
+    "inaccuracy": 2,
+    "minWarmup": 0.9,
+    "shootSound": "shootAlt",
+    "shootWarmupSpeed": 0.5,
+    "warmupMaintainTime": 120,
+    "recoils": 1,
+    "recoil": 2,
+    "predictTarget": true,
+    "shake": 1.5,
+    "requirements": [
+      { "item": "tungsten", "amount": 100},
+      { "item": "graphite", "amount": 275},
+      { "item": "silicon", "amount": 200},
+      { "item": "beryllium", "amount": 100}        
+    ],
+    "ammoTypes": {
+        "tungsten": {
+            "type": "BasicBulletType",
+            "despawnHit": true,
+            "despawnSound": "hitBulletBig",
+            "splashDamage": 8,
+            "shootEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    {
+                        "type": "ParticleEffect",
+                        "particles": 9,
+                        "cone": 100,
+                        "length": 50,
+                        "colorFrom": "69edffff",
+                        "colorTo": "a9c4ffff"
+                    }
+                ]
+            },
+            "speed": 7,
+            "damage": 125,
+            "width": 15,
+            "length": 50,
+            "frontColor": "cee8f0",
+            "backColor": "e7f7fb",
+            "trailColor": "bfd5eb",
+            "trailChance": 1.5,
+            "trailWidth": 1.5,
+            "trailLength": 10
+        },
+        "thorium": {
+            "type": "BasicBulletType",
+            "despawnHit": true,
+            "despawnSound": "hitBulletBig",
+            "splashDamage": 16,
+            "splashRange": 10,
+            "shootEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    {
+                        "type": "ParticleEffect",
+                        "particles": 10,
+                        "cone": 100,
+                        "length": 50,
+                        "colorFrom": "d991dd",
+                        "colorTo": "e753ef"
+                    }
+                ]
+            },
+            "speed": 10,
+            "damage": 155,
+            "width": 15,
+            "length": 60,
+            "frontColor": "e4a1e4",
+            "backColor": "e4a1e4",
+            "trailColor": "e958ea",
+            "trailChance": 1.5,
+            "trailWidth": 1.5,
+            "trailLength": 10
+        }
+    },
+
+    "drawer": {
+        "type": "DrawTurret",
+        "basePrefix": "reinforced-",
+        "parts": [
+            {
+                "type": "RegionPart",
+                "suffix": "-body",
+                "progress": "warmup",
+                "heatProgress": "recoil",
+                "under": true,
+                "heatColor": "f23b38",
+                "moveY": -1
+            },
+            {
+                "type": "RegionPart",
+                "suffix": "-blade-l",
+                "progress": "warmup",
+                "heatProgress": "recoil",
+                "under": false,
+                "moveY": -1.5,
+                "moveX": -1,
+                "moveRot": 16
+            },
+            {
+                "type": "RegionPart",
+                "suffix": "-blade-r",
+                "progress": "warmup",
+                "heatProgress": "recoil",
+                "under": false,
+                "moveY": -1.5,
+                "moveX": 1,
+                "moveRot": -16
+            },
+            {
+                "type": "RegionPart",
+                "suffix": "-back-blade-l",
+                "progress": "warmup",
+                "heatProgress": "recoil",
+                "under": false,
+                "moveY": -2,
+                "moveX": -1.5,
+                "moveRot": 10
+            },
+            {
+                "type": "RegionPart",
+                "suffix": "-back-blade-r",
+                "progress": "warmup",
+                "heatProgress": "recoil",
+                "under": false,
+                "moveY": -2,
+                "moveX": 1.5,
+                "moveRot": -10
+            },
+            {
+                "type": "HaloPart",
+                "tri": true,
+                "color1": "b6c6f8",
+                "haloRadius": 0,
+                "shapes": 4,
+                "triLength": 0,
+                "triLengthTo": 8,
+                "radiusTo": 6,
+                "progress": "recoil",
+                "layer": 99,
+                "y": 6
+            }
+        ]
+    },
+    "research": "mod-gate-turrets",
+    "category": "turret"
+}

@@ -1,7 +1,6 @@
 {
   "type": "ItemTurret",
   "name": "Tungsten Turret",
-  "displayName": "Tungsten Turret",
   "description": "Fires Hydrogen-Coated Tungsten Bullets",
   "size": 3,
   "health": 1500,
@@ -65,7 +64,7 @@
             ]
         },
         "speed": 7,
-        "damage": 15,
+        "damage": 100,
         "width": 12,
         "length": 45,
         "frontColor": "7ce6f2",
