@@ -13,5 +13,8 @@
     "collant": false,
     "incinerable": false,
     "boilPoint": 2.74,
-    "vaporEffect": "fluxVapor"
+    "vaporEffect": "fluxVapor",
+    "research": {
+        "parent": "mod-gate-liquids"
+    }
 }

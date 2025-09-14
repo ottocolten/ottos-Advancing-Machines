@@ -1,0 +1,30 @@
+{
+    "type": "HeatProducer",
+    "name": "Silicon Blast Smelter",
+    "description": "An advanced version of the Silicon Smelter",
+    "health": 1500,
+    "heatOutput": 15,
+    "warmupRate": 1,
+    "size": 5,
+    "itemCapacity": 100,
+    "hasPower": true,
+    "hasItems": true,
+    "category": "crafting",
+    "research": { "parent": "mod-gate-production" },
+
+    "outputItems": [
+        { "item": "silicon", "amount": 16 }
+    ],
+    "consumes": {
+        "power": 13,
+        "items": [
+            { "item": "sand", "amount": 15},
+            { "item": "graphite", "amount": 5}
+        ]
+    },
+    "requirements": [
+        { "item": "graphite", "amount": 325 },
+        { "item": "beryllium", "amount": 450 },
+        { "item": "tungsten", "amount": 275 }
+    ]
+}

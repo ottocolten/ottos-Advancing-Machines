@@ -2,7 +2,7 @@
   "type": "ItemTurret",
   "name": "Tungsten Turret",
   "displayName": "Tungsten Turret",
-  "description": "A Turret made of pure tungsten",
+  "description": "Fires Hydrogen-Coated Tungsten Bullets",
   "size": 3,
   "health": 1500,
   "rotateSpeed": 2.5,
@@ -10,38 +10,73 @@
   "targetGround": true,
   "reload": 30,
   "range": 200,
-  "inaccuracy": 5,
+  "inaccuracy": 0,
   "shootSound": "shootAlt",
+  "hitSound": "titanExplosion",
+  "shootWarmupSpeed": 0.02,
+  "warmupMaintainTime": 60,
   "recoils": 2,
-  "recoil": 1,
+  "recoil": 2,
   "predictTarget": true,
+  "chargeSound": "lasercharge2",
   "shake": 1,
-  "booster": 2,
   "requirements": [
       { "item": "tungsten", "amount": 250},
       { "item": "graphite", "amount": 50}
   ],
-
-  "ammoTypes":{
-    "tungsten":{
-      "type": "BasicBulletType",
-      "despawnHit": true,
-      "hitSound": "hitLaser",
-      "shootEffect": "shootBigSmoke",
-      "smokeEffect": "shootBigSmoke2",
-      "speed": 7,
-      "damage": 15,
-      "width": 12,
-      "length": 45,
-      "frontColor": "7ce6f2",
-      "backColor": "54ccf7",
-      "trailChance": 1,
-      "trailWidth": 1.3,
-      "trailLength": 8,
-      "trailColor": "8a9bff",
-      "ammoMultiplier": 1
-    }
-  },
+    "ammoTypes":{
+      "tungsten":{
+        "type": "BasicBulletType",
+        "despawnHit": true,
+        "hitSound": "hitLaser",
+        "shootEffect": {
+            "type": "MultiEffect",
+            "effects": [
+                {
+                  "type": "ParticleEffect",
+                  "particles": 7,
+                  "cone": 100,
+                  "length": 60,
+                  "baseLength": 10,
+                  "colorFrom": "587fffff",
+                  "colorTo": "a3ceffad"
+                }
+              ]
+        },
+        "despawnEffect": {
+            "type": "MultiEffect",
+            "effects": [
+              {
+                "type": "ParticleEffect",
+                "colorFrom": "3083ffff",
+                "colorTo": "9cc3ffff",
+                "length": 80,
+                "particles": 16,
+                "interp": "pow3Out"
+              },
+              {
+                "type": "WaveEffect",
+                "colorFrom": "3084b4ff",
+                "colorTo": "9cc3ffff",
+                "sizeFrom": 0,
+                "sizeTo": 100,
+                "interp": "pow2Out"
+              }
+            ]
+        },
+        "speed": 7,
+        "damage": 15,
+        "width": 12,
+        "length": 45,
+        "frontColor": "7ce6f2",
+        "backColor": "54ccf7",
+        "trailChance": 1,
+        "trailWidth": 1.3,
+        "trailLength": 8,
+        "trailColor": "8a9bff",
+        "ammoMultiplier": 1
+      }
+    },
 
   "drawer": {
     "type": "DrawTurret",
@@ -51,32 +86,82 @@
         "type": "RegionPart",
         "suffix": "-body",
         "progress": "warmup",
-        "recoilindex": "0",
+        "under": true,
         "moveY": -1
-
       },
       {
         "type": "RegionPart",
         "suffix": "-barrel-l",
         "progress": "recoil",
-        "recoilindex": "1",
+        "heatProgress": "warmup",
+        "heatColor": "d89083c5",
         "moveY": -2
       },
       {
         "type": "RegionPart",
         "suffix": "-barrel-r",
         "progress": "recoil",
-        "recoilindex": "2",
+        "heatProgress": "warmup",
+        "heatColor": "d89083c5",
         "moveY": -2
+      },
+      {
+        "type": "ShapePart",
+        "circle": true,
+        "color": "00b3ff",
+        "hollow": true,
+        "y": -2,
+        "shapeRotateSpeed": 10,
+        "radius": 7,
+        "stroke": 0,
+        "strokeTo": 0.7,
+        "layer": 100
+      },
+      {
+        "type": "ShapePart",
+        "circle": true,
+        "color": "b9d7ff",
+        "hollow": true,
+        "y": -2,
+        "shapeRotateSpeed": 45,
+        "radius": 5,
+        "stroke": 0,
+        "strokeTo": 1,
+        "layer": 99
+      },
+      {
+        "type": "ShapePart",
+        "circle": false,
+        "color": "b9d7ff",
+        "sides": 4,
+        "hollow": true,
+        "y": -2,
+        "shapeRotateSpeed": -0.5,
+        "radius": 3,
+        "stroke": 0,
+        "strokeTo": 1,
+        "layer": 100
+      },
+      {
+        "type": "HaloPart",
+        "tri": true,
+        "color": "8cd7f7",
+        "haloRadius": 3,
+        "shapes": 4,
+        "triLength": 0,
+        "triLengthTo": 8,
+        "y": -2,
+        "stroke": 0,
+        "strokeTo": 2,
+        "layer": 100
       }
     ]
   },
 
   "consumes": {
-      "liquids": {
-          "liquid": "water",
-          "amount": 0.09,
-          "booster": true
+      "liquid": {
+          "liquid": "hydrogen",
+          "amount": 0.1
       }
     },
 

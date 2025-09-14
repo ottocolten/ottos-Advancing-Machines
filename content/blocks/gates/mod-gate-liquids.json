@@ -1,0 +1,11 @@
+{
+    "type": "wall",
+    "name": "Gate: Advanced Liquids",
+    "description": "The Gate towards all of the Advanced Liquids...   Its not dumb shut up",
+    "details": "The Gate for Advanced Liquids.",
+    "health": 0,
+    "buildVisibility": "hidden",
+    "alwaysUnlocked": true,
+    "research": "mod-gate-main",
+    "size": 1
+}

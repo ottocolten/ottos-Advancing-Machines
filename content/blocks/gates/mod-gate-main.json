@@ -9,6 +9,7 @@
     "research": {
         "root": true,
         "name": "Advanced Machines",
+        "planet": "erekir",
         "requiresUnlock": true
     },
     "availableIn": [
