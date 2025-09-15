@@ -5,7 +5,7 @@
   "health": 400,
   "size": 2,
   "requirements": [],
-  "buildable": false,
+  "hidden": true,
   "category": "units",
   "alwaysUnlocked": true
 }

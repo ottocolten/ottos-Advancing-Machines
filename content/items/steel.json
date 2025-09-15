@@ -1,0 +1,10 @@
+{
+    "type": "item",
+    "name": "steel",
+    "description": "A plate of Steel",
+    "color": "aaacb3ff",
+    "hardness": 1,
+    "cost": 80,
+    "healthScaling": 1.5,
+    "charge": 0.01
+}

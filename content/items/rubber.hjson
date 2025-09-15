@@ -1,8 +1,0 @@
-type: item
-name: rubber
-displayName: "Rubber"
-description: "A piece of Rubber"
-color: 0a0a0aff
-hardness: 1
-cost: 60
-healthScaling: 0.8
