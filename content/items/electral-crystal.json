@@ -1,0 +1,11 @@
+{
+	"type": "item",
+	"name": "Electral",
+	"description": "A natural Crystal. It has properties that allow for better energy production and transport",
+    "color": "ffb429ff",
+    "cost": 2,
+    "charge": 3.5,
+    "explosiveness": 1.2,
+    "flammability": 0.8,
+    "research": { "parent": "mod-gate-items" }
+}

@@ -13,25 +13,19 @@
 
     "consumes": {
         "items": {
-            "item": [
-                { "item": "oxide", "amount": 3}
+            "items": [
+                "oxide/3"   
             ]
         },
         "liquids":{
-            "liquid": [
-                { "liquid": "ozone", "amount": 4}
+            "liquids": [
+                "ozone/4"
             ]
         },
         "power": 1
     },
 
-    "output": {
-        "items": {
-            "item": [
-                { "item": "rubber", "amount": 2}
-            ]
-        }
-    },
+    "outputItem": "rubber/2",
 
     "requirements": [
         { "item": "tungsten", "amount": 105},

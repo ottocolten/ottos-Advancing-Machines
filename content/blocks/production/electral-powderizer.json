@@ -1,0 +1,28 @@
+{
+    "type": "HeatCrafter",
+    "name": "Electral Powderizer",
+    "description": "Powderizes Electral Crystals into Fine Powder",
+    "health": 1250,
+    "heatRequirement": 13,
+    "size": 4,
+    "itemCapacity": 100,
+    "hasPower": true,
+    "hasItems": true,
+    "category": "crafting",
+    "research": { "parent": "mod-gate-production" },
+
+    "outputItems": [
+        { "item": "electral-powder", "amount": 5 }
+    ],
+    "consumes": {
+        "power": 13,
+        "items": [
+            { "item": "electral-crystal", "amount": 2 }
+        ]
+    },
+    "requirements": [
+        { "item": "graphite", "amount": 325 },
+        { "item": "beryllium", "amount": 450 },
+        { "item": "tungsten", "amount": 275 }
+    ]
+}

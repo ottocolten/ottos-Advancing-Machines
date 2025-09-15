@@ -1,0 +1,11 @@
+{
+	"type": "item",
+	"name": "Electral Powder",
+	"description": "Powderized Electral Crystals",
+    "color": "f8d820",
+    "cost": 1.25,
+    "charge": 4.65,
+    "explosiveness": 1.3,
+    "flammability": 1.0,
+    "research": { "parent": "mod-gate-items" }
+}
