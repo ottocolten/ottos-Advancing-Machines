@@ -1,0 +1,19 @@
+{
+    "type": "flying",
+    "name": "Myriad",
+    "template": "TankUnitType",
+    "flying": "true",
+    "description": "A Bigger and Better Manifold for transporting more items over long distances",
+    "health": 450,
+    "armor": 0,
+    "hitSize": 11,
+    "accel": 0.05,
+    "speed": 3.5,
+    "lightRadius": 6,
+    "targetAir": false,
+    "payloadCapacity": 9,
+    "itemCapacity": 350,
+    "rotateSpeed": 2.5,
+    "drawMinimap": false,
+    "canAttack": false
+}

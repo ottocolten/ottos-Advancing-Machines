@@ -3,7 +3,7 @@
     "name": "Tank Assembly Garage",
     "description": "Fabricates materials to be used in Part Factories",
     "size": 16,
-    "health": 2500,
+    "health": 25000,
     "craftTime": 3600,
     "hasPower": true,
     "areaSize": 35,
