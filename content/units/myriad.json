@@ -1,19 +1,31 @@
 {
-    "type": "flying",
+    "type": "tether",
     "name": "Myriad",
-    "template": "TankUnitType",
-    "flying": "true",
     "description": "A Bigger and Better Manifold for transporting more items over long distances",
-    "health": 450,
-    "armor": 0,
-    "hitSize": 11,
-    "accel": 0.05,
-    "speed": 3.5,
-    "lightRadius": 6,
-    "targetAir": false,
+    "flying": "true",
+    "controller": "CargoAI",
+    "isEnemy": false,
+    "logicControllable": false,
+    "allowedInPayloads": false,
+    "playerControllable": false,
     "payloadCapacity": 9,
-    "itemCapacity": 350,
-    "rotateSpeed": 2.5,
-    "drawMinimap": false,
-    "canAttack": false
+    "lowAltitude": false,
+    "drag": 0.08,
+    "speed": 5,
+    "outlineColor": "565666ff",
+    "rotateSpeed": 11,
+    "accel": 0.1,
+    "engineSize": 0,
+    "itemCapacity": 400,
+    "health": 300,
+    "hisSize": 8,
+    "hidden": true,
+    "engines": [
+        {
+            "x": 0,
+            "y": -10,
+            "rotation": 0,
+            "radius": 1.5
+        }
+    ]
 }

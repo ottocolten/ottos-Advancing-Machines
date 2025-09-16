@@ -1,29 +1,22 @@
 {
-    "type": "UnitAssembler",
+    "type": "UnitCargoLoader",
     "name": "Unit Cargo Depositor",
     "description": "Constructs better cargo drones. These drones automatically distribute items to Cargo Unload Points with a matching filter.",
     "size": 4,
     "health": 1500,
     "craftTime": 36,
     "hasPower": true,
-    "areaSize": 35,
+    "hasItems": true,
+    "hasLiquids": true,
+    "liquidCapacity": 15,
+    "polyColor": "f87f1dff",
+    "polyRadius": 9,
     "consumes": {
-        "power": 200
+        "power": 0.1666666667,
+        "liquid": { "liquid": "sonyogen", "amount": 0.8333333333 }
     },
-    "plans": [
-        {
-            "type": "",
-            "unit": "myriad",
-            "time": 60,
-            "requirements": {
-                "liquid": 
-                [
-                    { "liquid": "advancing-machines-sonyogen", "amount": 55 }
-                ]
-            }
-        }
-    ],
-
+    "unitType": "myriad",
+    "buildTime": 480,
     "requirements": [
         { "item": "tungsten", "amount": 95 },
         { "item": "oxide", "amount": 55 },
@@ -31,5 +24,5 @@
         { "item": "silicon", "amount": 125 }
     ],
 
-    "category": "transport"
+    "category": "distribution"
 }

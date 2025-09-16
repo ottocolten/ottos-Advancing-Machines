@@ -1,0 +1,14 @@
+{
+    "type": "UnitCargoUnloadPoint",
+    "name": "Unit Cargo Unload Port",
+    "description": "An advanced version of the Unit Cargo Unload Point. Accepts items that match the selected filter.",
+    "itemCapacity": 250,
+    "size": 3,
+    "category": "distribution",
+    "staleTimeDuration": 36,
+    "requirements": [
+        { "item": "tungsten", "amount": 86 },
+        { "item": "silicon", "amount": 75 },
+        { "item": "graphite", "amount": 30 }
+    ]
+}
