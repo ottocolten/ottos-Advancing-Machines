@@ -15,7 +15,7 @@
         { "item": "electral-powder", "amount": 5 }
     ],
     "consumes": {
-        "power": 13,
+        "power": 1.666666667,
         "items": [
             { "item": "electral-crystal", "amount": 2 }
         ]

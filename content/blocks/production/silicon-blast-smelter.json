@@ -6,7 +6,7 @@
     "heatOutput": 15,
     "warmupRate": 1,
     "size": 5,
-    "itemCapacity": 100,
+    "itemCapacity": 120,
     "hasPower": true,
     "hasItems": true,
     "category": "crafting",
@@ -16,7 +16,7 @@
         { "item": "silicon", "amount": 16 }
     ],
     "consumes": {
-        "power": 13,
+        "power": 2.666666667,
         "items": [
             { "item": "sand", "amount": 15},
             { "item": "graphite", "amount": 5}

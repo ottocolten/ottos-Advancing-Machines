@@ -1,0 +1,11 @@
+{
+    "type": "wall",
+    "name": "Gate: Advanced Power",
+    "description": "The Gate towards all of the Advanced Power.",
+    "details": "The Gate for Advanced Power.",
+    "health": 0,
+    "buildVisibility": "hidden",
+    "alwaysUnlocked": true,
+    "research": "mod-gate-main",
+    "size": 1
+}

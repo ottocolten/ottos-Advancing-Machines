@@ -1,0 +1,22 @@
+{
+    "type": "BeamNode",
+    "name": "Electral Node",
+    "description": "A Beam Node with Electral Crystals built inside for better and faster energy transfer",
+    "health": 115,
+    "size": 1,
+    "consumesPower": true,
+    "range": 16,
+    "outputsPower": true,
+    "laserColor1": "fffac9ff",
+    "laserColor2": "ffe88dff",
+    "requirements": [
+        "beryllium/14",
+        "graphite/5",
+        "electral-crystal/2"
+    ],
+    "consumes": {
+        "powerBuffered": 6000
+    },
+    "category": "power",
+    "research": "mod-gate-power"
+}

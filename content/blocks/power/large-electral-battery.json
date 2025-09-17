@@ -1,0 +1,23 @@
+{
+    "type": "Battery",
+    "name": "Large Electral Battery",
+    "description": "A Large Battery made with Electral Powder for larger, refined power Storage",
+    "health": 85,
+    "size": 3,
+    "consumes": {
+    "powerBuffered": 2000
+    },
+    "emptyLightColor": "f46b42ff",
+    "fullLightColor": "a5db54ff",
+    "requirements": [
+        "tungsten/35",
+        "graphite/10",
+        "electral-powder/15",
+        "electral-crystal/4"
+    ],
+    "drawer": {
+
+    },
+    "category": "power",
+    "research": "mod-gate-power"
+}
