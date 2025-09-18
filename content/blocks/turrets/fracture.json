@@ -1,60 +1,30 @@
 {
     "type": "ItemTurret",
     "name": "Rupture",
-    "description": "Fires piercing Tungsten or Thorium ammunition at enemy targets. An upgraded variant of “Breach”",
-    "size": 3,
-    "health": 2065,
-    "rotateSpeed": 1.5,
+    "description": "Fires charged piercing Thorium, or Surge Alloy ammunition at enemy targets. An advanced variant of “Breach”",
+    "size": 4,
+    "health": 3050,
+    "rotateSpeed": 1.25,
     "targetAir": true,
     "targetGround": true,
-    "shotDelay": 100,
-    "reload": 40,
-    "range": 200,
-    "inaccuracy": 2,
+    "shotDelay": 240,
+    "reload": 120,
+    "range": 255,
+    "inaccuracy": 1,
     "minWarmup": 0.9,
     "shootSound": "shootAlt",
     "shootWarmupSpeed": 0.5,
     "warmupMaintainTime": 120,
-    "recoils": 1,
     "recoil": 2,
     "predictTarget": true,
-    "shake": 1.5,
+    "shake": 2,
     "requirements": [
-      { "item": "tungsten", "amount": 100},
-      { "item": "graphite", "amount": 275},
-      { "item": "silicon", "amount": 200},
-      { "item": "beryllium", "amount": 100}        
+      { "item": "tungsten", "amount": 150},
+      { "item": "graphite", "amount": 325},
+      { "item": "silicon", "amount": 250},
+      { "item": "surge-alloy", "amount": 85}        
     ],
     "ammoTypes": {
-        "tungsten": {
-            "type": "BasicBulletType",
-            "despawnHit": true,
-            "despawnSound": "hitBulletBig",
-            "splashDamage": 8,
-            "shootEffect": {
-                "type": "MultiEffect",
-                "effects": [
-                    {
-                        "type": "ParticleEffect",
-                        "particles": 9,
-                        "cone": 100,
-                        "length": 50,
-                        "colorFrom": "69edffff",
-                        "colorTo": "a9c4ffff"
-                    }
-                ]
-            },
-            "speed": 7,
-            "damage": 125,
-            "width": 15,
-            "length": 50,
-            "frontColor": "cee8f0",
-            "backColor": "e7f7fb",
-            "trailColor": "bfd5eb",
-            "trailChance": 1.5,
-            "trailWidth": 1.5,
-            "trailLength": 10
-        },
         "thorium": {
             "type": "BasicBulletType",
             "despawnHit": true,
@@ -81,6 +51,35 @@
             "frontColor": "e4a1e4",
             "backColor": "e4a1e4",
             "trailColor": "e958ea",
+            "trailChance": 1.5,
+            "trailWidth": 1.5,
+            "trailLength": 10
+        },
+        "surge-alloy": {
+            "type": "LightningBulletType",
+            "despawnHit": true,
+            "despawnSound": "hitBulletBig",
+            "splashDamage": 16,
+            "splashRange": 10,
+            "shootEffect": {
+                "type": "MultiEffect",
+                "effects": ["lightning",{
+                        "type": "ParticleEffect",
+                        "particles": 10,
+                        "cone": 100,
+                        "length": 50,
+                        "colorFrom": "e8d58fff",
+                        "colorTo": "e6a823ff"
+                    }
+                ]
+            },
+            "speed": 10,
+            "damage": 155,
+            "width": 15,
+            "length": 60,
+            "frontColor": "fede11ff",
+            "backColor": "ffbb00ff",
+            "trailColor": "f7ab40ff",
             "trailChance": 1.5,
             "trailWidth": 1.5,
             "trailLength": 10
