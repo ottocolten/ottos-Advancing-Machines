@@ -1,0 +1,10 @@
+{
+    "type": "item",
+    "name": "Iron",
+    "description": "A hard metal, used for lots of things.",
+    "color": "aaacb3ff",
+    "hardness": 1,
+    "cost": 50,
+    "healthScaling": 1.25,
+    "charge": 0.08
+}

@@ -1,0 +1,30 @@
+{
+    "type": "HeatCrafter",
+    "name": "Steel Alloyer",
+    "description": "Melts Graphite, Tungsten, and Iron into a Steel-like alloy",
+    "health": 1250,
+    "heatRequirement": 15,
+    "size": 3,
+    "itemCapacity": 120,
+    "hasPower": true,
+    "hasItems": true,
+    "category": "crafting",
+    "research": { "parent": "mod-gate-production" },
+
+    "outputItems": [
+        { "item": "steel", "amount": 16 }
+    ],
+    "consumes": {
+        "power": 1.666666667,
+        "items": [
+            { "item": "graphite", "amount": 4},
+            { "item": "tungsten", "amount": 2},
+            { "item": "iron", "amount": 5}
+        ]
+    },
+    "requirements": [
+        { "item": "graphite", "amount": 200 },
+        { "item": "silicon", "amount": 180 },
+        { "item": "tungsten", "amount": 250 }
+    ]
+}

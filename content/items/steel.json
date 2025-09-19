@@ -1,7 +1,7 @@
 {
     "type": "item",
-    "name": "steel",
-    "description": "A plate of Steel",
+    "name": "Steel",
+    "description": "An alloy of Iron, Tungsten, and Graphite.",
     "color": "aaacb3ff",
     "hardness": 1,
     "cost": 80,
