@@ -1,0 +1,40 @@
+{
+  "type": "Block", 
+  "name": "Small Thruster",
+  "description": "A small Thruster that would be attached to a space ship. It has long since seen the beauty of space however.",
+  "health": 600,
+  "size": 3,
+  "hidden": false,
+  "category": "turret",
+  "connectedPower": false,
+  "conductivePower": true,
+  "baseExplosiveness": 1,
+  "armor": 1,
+  "breakable": true,
+  "destructible": true,
+  "destroyEffect": {
+        "type": "MultiEffect",
+        "effects": [
+        {
+            "type": "ParticleEffect",
+            "particles": 10,
+            "cone": 360,
+            "length": 120,
+            "baseLength": 15,
+            "colorFrom": "ecd37eff",
+            "colorTo": "ff1111ff"
+        }
+        ]
+  },
+  "placeEffect": {
+    "type": "WaveEffect",
+    "colorFrom": "0059ffff",
+    "colorTo": "2493faff",
+    "lightColor": "00e1ffff",
+    "sides": 4,
+    "interp": "pow3Out",
+    "strokeFrom": 6,
+    "strokeTo": 0
+  },
+  "alwaysUnlocked": true
+}
