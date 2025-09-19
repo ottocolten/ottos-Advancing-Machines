@@ -8,7 +8,7 @@
     "logicControllable": false,
     "allowedInPayloads": false,
     "playerControllable": false,
-    "payloadCapacity": 9,
+    "payloadCapacity": 10,
     "lowAltitude": false,
     "drag": 0.08,
     "speed": 5,
@@ -25,19 +25,19 @@
             "x": 0,
             "y": -10,
             "rotation": 90,
-            "radius": 2.5
+            "radius": 2
         },
         {
-            "x":4.5,
+            "x":4.75,
             "y":-10,
             "rotation": 45,
             "radius": 2.5
         },
         {
-            "x":-4.5,
+            "x":-4.75,
             "y":-10,
             "rotation": -45,
-            "radius": 2.5
+            "radius": 2
         }
     ]
 }

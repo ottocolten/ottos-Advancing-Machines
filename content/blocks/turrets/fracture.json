@@ -1,6 +1,6 @@
 {
     "type": "ItemTurret",
-    "name": "Rupture",
+    "name": "Fracture",
     "description": "Fires charged piercing Thorium, or Surge Alloy ammunition at enemy targets. An advanced variant of “Breach”",
     "size": 4,
     "health": 3050,
@@ -18,6 +18,12 @@
     "recoil": 2,
     "predictTarget": true,
     "shake": 2,
+    "consumes": {
+        "power": 1.083333333,
+        "liquids": [
+            { "liquid": "arkycite", "amount": 0.75 }
+        ]
+    },
     "requirements": [
       { "item": "tungsten", "amount": 150},
       { "item": "graphite", "amount": 325},
@@ -56,7 +62,7 @@
             "trailLength": 10
         },
         "surge-alloy": {
-            "type": "LightningBulletType",
+            "type": "MultiBulletType",
             "despawnHit": true,
             "despawnSound": "hitBulletBig",
             "splashDamage": 16,
@@ -101,56 +107,21 @@
             },
             {
                 "type": "RegionPart",
-                "suffix": "-blade-l",
+                "suffix": "-blade-br",
                 "progress": "warmup",
-                "heatProgress": "recoil",
                 "under": false,
                 "moveY": -1.5,
                 "moveX": -1,
-                "moveRot": 16
-            },
-            {
-                "type": "RegionPart",
-                "suffix": "-blade-r",
-                "progress": "warmup",
-                "heatProgress": "recoil",
-                "under": false,
-                "moveY": -1.5,
-                "moveX": 1,
                 "moveRot": -16
             },
             {
                 "type": "RegionPart",
-                "suffix": "-back-blade-l",
+                "suffix": "-blade-bl",
                 "progress": "warmup",
-                "heatProgress": "recoil",
                 "under": false,
-                "moveY": -2,
-                "moveX": -1.5,
-                "moveRot": 10
-            },
-            {
-                "type": "RegionPart",
-                "suffix": "-back-blade-r",
-                "progress": "warmup",
-                "heatProgress": "recoil",
-                "under": false,
-                "moveY": -2,
-                "moveX": 1.5,
-                "moveRot": -10
-            },
-            {
-                "type": "HaloPart",
-                "tri": true,
-                "color1": "b6c6f8",
-                "haloRadius": 0,
-                "shapes": 4,
-                "triLength": 0,
-                "triLengthTo": 8,
-                "radiusTo": 6,
-                "progress": "recoil",
-                "layer": 99,
-                "y": 6
+                "moveY": -1.5,
+                "moveX": -1,
+                "moveRot": 16
             }
         ]
     },
