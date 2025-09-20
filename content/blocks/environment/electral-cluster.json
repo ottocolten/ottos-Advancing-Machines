@@ -1,0 +1,7 @@
+{
+    "type": "TallBlock",
+    "name": "Electral Crystal Cluster",
+    "variants": 2,
+    "clipSize": 128,
+    "shadowAlpha": 0.5
+}
